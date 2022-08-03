@@ -14,7 +14,7 @@ function App() {
             <span className="font-bold">Full Stack Web & Mobile Developer </span>
           </h1>
           <p className="text-base font-medium mt-5">
-            {chance.sentence({ words: 50 })}
+            Interested in mobile and web development. I have 3 years experience with the react js and react native frameworks. The following are projects I have developed ↓
           </p>
         </div>
 
