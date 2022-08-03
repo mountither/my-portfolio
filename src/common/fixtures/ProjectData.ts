@@ -5,7 +5,7 @@ export type StackCategories =
   | "Frontend"
   | "Backend"
   | "DevOps"
-  | "Misc";
+  | "Other";
 
 type StackInfo = {
   title: string;
@@ -22,8 +22,8 @@ export type ProjectData = {
   cardSize: "sm" | "md" | "lg";
   bgColour: string;
   category: string;
-  techStack: {
-    [key in StackCategories]?: StackInfo[];
+  stack: {
+    [key in StackCategories | string]?: StackInfo[];
   };
 };
 
@@ -44,7 +44,7 @@ export const projectData: ProjectData[] = [
     link: "https://www.bingenabe.app/",
     bgColour: "bg-[#43afa2]",
     cardSize: "lg",
-    techStack: {
+    stack: {
       Design: [
         {
           title: "App prototype (Figma)",
@@ -88,7 +88,7 @@ export const projectData: ProjectData[] = [
       DevOps: [
         {
           title: "Fastlane",
-          desc: "Used to automate Beta and Production releases. Fastlane integrates with the App Store and Play Store to upload metadata, screenshots and builds. Other integrated tasks include; version control via Github and CodePush.",
+          desc: "Used to automate Beta and Production releases. Fastlane integrates with the App Store and Play Store to upload metadata, screenshots and builds. Other integrated tasks include; CodePush and version control via Github.",
         },
         {
           title: "CodePush",
@@ -100,12 +100,11 @@ export const projectData: ProjectData[] = [
   {
     title: "Historical Mesopotamia",
     desc: "Scrapes wikipedia based data and presents it on a timeline. Each historical era is used to query museum artifacts from 6 museums.",
-    image: BingeNabe,
     link: "https://www.historicalmesopotamia.com",
     category: "Web",
     bgColour: "bg-[#566d8c]",
     cardSize: "md",
-    techStack: {
+    stack: {
       Frontend: [
         {
           title: "Development (React JS)",
@@ -133,12 +132,11 @@ export const projectData: ProjectData[] = [
   {
     title: "Corner Barber House",
     desc: "A business solution that allows customers to make and manage bookings.",
-    image: BingeNabe,
     link: "https://www.cornerbarberhouse.com.au/",
     bgColour: "bg-[#d1b46f]",
     category: "Web",
     cardSize: "md",
-    techStack: {
+    stack: {
       Design: [
         {
           title: "App prototype (Adobe XD)",
@@ -149,7 +147,7 @@ export const projectData: ProjectData[] = [
       Frontend: [
         {
           title: "UI Development (Next JS - Typescript)",
-          desc: "A react framework used to render static and server rendered pages.",
+          desc: "A react framework used to render static and server rendered pages. Custom booking form/calendar.",
         },
         {
           title: "Blog",
@@ -157,7 +155,7 @@ export const projectData: ProjectData[] = [
         },
         {
           title: "Server side & Static generated pages",
-          desc: "Server side rendered pages include: manager's and customer's pages. Static generated pages include: About, Contact, Blog, etc. These rendering methods help with SEO and page performance.",
+          desc: "Server side rendered pages include: manager's and customer's pages (check user roles on server). Statically generated pages include: About, Contact, Blog, etc. These rendering methods help with SEO and page performance.",
         },
       ],
       Backend: [
@@ -165,10 +163,14 @@ export const projectData: ProjectData[] = [
           title: "BaaS (Firebase)",
           desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage and Cloud functions.",
         },
-      ],
-      DevOps:[
         {
-          title:"Deployment (Vercel)",
+          title: "Database",
+          desc: "Realtime updates to booking times when user is selecting date/time. User details on authentication.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (Vercel)",
           desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch."
         }
       ]
@@ -177,17 +179,16 @@ export const projectData: ProjectData[] = [
   {
     title: "VoIP calling app",
     desc: "A proof of concept project that implements WebRTC that allows users to request one-on-one voice calls.",
-    image: BingeNabe,
     link: "https://github.com/mountither/social-call-app-demo",
     bgColour: "bg-[#34B7F1]",
     category: "Mobile",
     cardSize: "md",
-    techStack: {
+    stack: {
       Frontend: [
         {
           title: "UI Development (React Native - Typescript)",
           desc: "Cross platform solution for implementing the app's UI.",
-          links:[{type:"source-code", url:"https://github.com/mountither/social-call-app-demo"}]
+          links: [{ type: "source-code", url: "https://github.com/mountither/social-call-app-demo" }]
         },
         {
           title: "WebRTC (react-native-webrtc)",
@@ -208,13 +209,12 @@ export const projectData: ProjectData[] = [
   },
   {
     title: "Untitled website (Film/TV discovery + organiser)",
-    desc: ".",
-    image: BingeNabe,
+    desc: "",
     link: "https://filmtv-idd.de/",
     bgColour: "bg-[#20c997]",
     category: "Web",
     cardSize: "md",
-    techStack: {
+    stack: {
       Design: [
         {
           title: "App prototype (Figma)",
@@ -226,7 +226,7 @@ export const projectData: ProjectData[] = [
         {
           title: "UI Development (Vue JS - Typescript)",
           desc: "Implements of all screens and components.",
-          links: [{type: "source-code", url: "https://github.com/mountither/filmtv-idd"}]
+          links: [{ type: "source-code", url: "https://github.com/mountither/filmtv-idd" }]
         },
       ],
       Backend: [
@@ -245,79 +245,65 @@ export const projectData: ProjectData[] = [
     bgColour: "bg-[#976b70]",
     category: "Web",
     cardSize: "lg",
-    techStack: {
+    stack: {
       Frontend: [
         {
           title: "UI Development (React JS)",
-          desc: "",
+          desc: "Implements pages and components with styling by sass preprocesser.",
         },
       ],
       Backend: [
         {
           title: "Database (MongoDB)",
-          desc: "",
+          desc: "Stores and analyses product and booking data in NoSQL format.",
         },
         {
           title: "IaaS (Google Compute Engine)",
-          desc: "",
+          desc: "Hosts and runs docker images that consist of the frontend (reactjs), backend framework (nodejs) and web server (nginx)",
         },
         {
           title: "HTTPS certification (Let's Encrypt)",
           desc: "Automated via daily scheduled cronjobs",
         },
         {
-          title: "Virtualisation (Docker)",
-          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
-        },
-        {
-          title: "Reverse Proxy and Web server",
+          title: "Reverse Proxy and Web server (nginx)",
           desc: "Used to serve the appropriate responses of website pages with correct ssl certificates and external links via email. Reverse proxy is used to direct users from port 80 (http) to port 443 (https).",
         },
         {
           title: "Email delivery (SendGrid)",
-          desc: "",
+          desc: "Sends email to managers when booking is made. Sends customer email on response (accept/reject).",
         },
       ],
+      DevOps: [
+        {
+          title: "Containers (Docker)",
+          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
+        },
+      ],
+      Other: [
+        {
+          title: "Product managment solution (Python/Flask microframework)",
+          desc: "Manager portal that allows for product information (details and images) to be inserted.",
+          links: [{ type: "source-code", url: "https://github.com/mountither/gcb-product-flask-service" }]
+        }
+      ]
     },
   },
   {
     title: "Data Science Projects",
-    desc: "Cross-platform (iOS and Android) film and tv social network app.",
-    image: BingeNabe,
-    link: "https://thegentscavebarber.com.au/",
     bgColour: "bg-[#8b8b81]",
     category: "Other",
     cardSize: "md",
-    techStack: {
-      Frontend: [
+    stack: {
+      "'Environment' project data analysis": [
         {
-          title: "UI Development (React JS)",
+          title: "",
           desc: "",
         },
       ],
-      Backend: [
+      "Various machine learning algorithms": [
         {
-          title: "Database (MongoDB)",
-          desc: "",
-        },
-        {
-          title: "IaaS (Google Compute Engine)",
-          desc: "",
-        },
-        {
-          title: "HTTPS certification (Let's Encrypt)",
-          desc: "Automated via daily scheduled cronjobs",
-        },
-        {
-          title: "Virtualisation (Docker)",
-          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
-        },
-        {
-          title: "Reverse Proxy and Web server",
-          desc: "Used to serve the appropriate responses of website pages with correct ssl certificates and external links via email. Reverse proxy is used to direct users from port 80 (http) to port 443 (https).",
-        },
-        {
-          title: "Email delivery (SendGrid)",
+          title: "",
           desc: "",
         },
       ],
@@ -325,45 +311,16 @@ export const projectData: ProjectData[] = [
   },
   {
     title: "Other Projects",
-    desc: "Cross-platform (iOS and Android) film and tv social network app.",
-    image: BingeNabe,
-    link: "https://thegentscavebarber.com.au/",
     bgColour: "bg-[#545453]",
     category: "Other",
     cardSize: "md",
-    techStack: {
-      Frontend: [
+    stack: {
+      "": [
         {
-          title: "UI Development (React JS)",
-          desc: "",
-        },
-      ],
-      Backend: [
-        {
-          title: "Database (MongoDB)",
-          desc: "",
-        },
-        {
-          title: "IaaS (Google Compute Engine)",
-          desc: "",
-        },
-        {
-          title: "HTTPS certification (Let's Encrypt)",
-          desc: "Automated via daily scheduled cronjobs",
-        },
-        {
-          title: "Virtualisation (Docker)",
-          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
-        },
-        {
-          title: "Reverse Proxy and Web server",
-          desc: "Used to serve the appropriate responses of website pages with correct ssl certificates and external links via email. Reverse proxy is used to direct users from port 80 (http) to port 443 (https).",
-        },
-        {
-          title: "Email delivery (SendGrid)",
-          desc: "",
-        },
-      ],
+          title: "",
+          desc: ""
+        }
+      ]
     },
   },
 ];

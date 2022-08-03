@@ -34,9 +34,8 @@ const ProjectCard = ({
       ${containerStyles}`}
     >
       <div
-        className={`absolute ${
-          enableOverlay ? `opacity-100` : "opacity-0 invisible"
-        } w-full transition-all duration-300 ease-in-out z-10 h-full rounded-3xl backdrop-blur-xl bg-black/60 overflow-y-scroll scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-thin text-white`}
+        className={`absolute ${enableOverlay ? `opacity-100` : "opacity-0 invisible"
+          } w-full transition-all duration-300 ease-in-out z-10 h-full rounded-3xl backdrop-blur-xl bg-black/60 overflow-y-scroll scrollbar-thumb-gray-400 scrollbar-track-transparent scrollbar-thin text-white`}
       >
         <div className="sm:py-12 sm:px-10 px-5 py-12 select-text">
           <h1 className={`text-2xl sm:text-3xl font-bold ${textStyles}`}>
@@ -46,8 +45,8 @@ const ProjectCard = ({
             <div className="flex flex-row flex-wrap items-start gap-4 mt-3">
               {(
                 Object.keys(
-                  data?.techStack
-                ) as (keyof ProjectData["techStack"])[]
+                  data?.stack
+                ) as (keyof ProjectData["stack"])[]
               ).map((category, i) => (
                 <div
                   key={category}
@@ -55,8 +54,8 @@ const ProjectCard = ({
                 >
                   <h1 className="text-sm font-bold">{category}</h1>
                   <div className="mt-2">
-                    {data?.techStack[category] &&
-                      data.techStack[category]?.map((stack) => (
+                    {data?.stack[category] &&
+                      data.stack[category]?.map((stack) => (
                         <div className="mb-3" key={stack.title}>
                           <div className="flex flex-row items-center gap-1">
                             <div
@@ -115,9 +114,8 @@ const ProjectCard = ({
 
       <div
         ref={iconParent}
-        className={`absolute z-20 top-3 sm:right-4 right-3 ${
-          !enableOverlay ? "bg-gray-200" : "bg-transparent"
-        } bg-opacity-20 rounded-full p-1 hover:bg-opacity-30 transition duration-500 ease-in-out`}
+        className={`absolute z-20 top-3 sm:right-4 right-3 ${!enableOverlay ? "bg-gray-200" : "bg-transparent"
+          } bg-opacity-20 rounded-full p-1 hover:bg-opacity-30 transition duration-500 ease-in-out`}
       >
         <div
           className="cursor-pointer"
@@ -136,16 +134,7 @@ const ProjectCard = ({
           )}
         </div>
       </div>
-
-      <div className="absolute bottom-10 left-5 pr-2">
-        <p className="text-gray-100 text-sm">{data.category}</p>
-        <h1 className={`text-3xl md:text-4xl font-bold  ${textStyles} `}>
-          {data.title}
-        </h1>
-        <p className={`text-base font-medium mt-2 ${textStyles}`}>
-          {data.desc}
-        </p>
-      </div>
+      {data?.link ? 
       <a
         href={data.link}
         target={"_blank"}
@@ -156,7 +145,18 @@ const ProjectCard = ({
           color={`${enableOverlay ? "#e0e0e0" : "#3b3b3b"}`}
           className={"transition-all  duration-200 ease-in-out"}
         />
-      </a>
+      </a> : null}
+
+      <div className="absolute bottom-10 left-5 pr-2">
+        <p className="text-gray-100 text-sm">{data.category}</p>
+        <h1 className={`text-3xl md:text-4xl font-bold  ${textStyles} `}>
+          {data.title}
+        </h1>
+        <p className={`text-base font-medium mt-2 ${textStyles}`}>
+          {data.desc}
+        </p>
+      </div>
+
     </div>
   );
 };
