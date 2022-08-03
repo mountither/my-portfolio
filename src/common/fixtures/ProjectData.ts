@@ -304,7 +304,7 @@ export const projectData: ProjectData[] = [
       "Various machine learning algorithms": [
         {
           title: "",
-          desc: "",
+          desc: ""
         },
       ],
     },
