@@ -74,7 +74,7 @@ export const projectData: ProjectData[] = [
       Backend: [
         {
           title: "BaaS (Firebase)",
-          desc: "All-in-one backend solution. Services utilised: Authentication (inc. 3rd party registration), Database/Storage, Cloud functions, Push notification capability and Beta builds distribution.",
+          desc: "'Quick setup' backend solution. Services utilised: Authentication (inc. 3rd party registration), Database/Storage, Cloud functions, Push notification capability and Beta builds distribution.",
         },
         {
           title: "Email Delivery (SendGrid)",
@@ -120,6 +120,10 @@ export const projectData: ProjectData[] = [
           title: "State management",
           desc: "Session storage used to cache some of timeline and gallery data. React in-built state management; Context API (consumes gallery state) and Reducer (used to organise state).",
         },
+        {
+          title: "APIs consumed",
+          desc: "This site uses wikipedia api to fetch data for timeline and other information presented in the drawer. Museum APIs include: The MET, Victoria and Albert Museum, Harvard Art Museums, Science Museum Group, Museums Victoria and Arts Institute Chicago.",
+        },
       ],
       DevOps: [
         {
@@ -141,7 +145,12 @@ export const projectData: ProjectData[] = [
         {
           title: "App prototype (Adobe XD)",
           desc: "UI & UX designs for the website's screens, components and other implementations.",
-          links: [{ type: "content", url: "https://xd.adobe.com/view/a2c04378-4197-462d-adcc-d8a6f53918da-f793/" }],
+          links: [
+            {
+              type: "content",
+              url: "https://xd.adobe.com/view/a2c04378-4197-462d-adcc-d8a6f53918da-f793/",
+            },
+          ],
         },
       ],
       Frontend: [
@@ -151,7 +160,7 @@ export const projectData: ProjectData[] = [
         },
         {
           title: "Blog",
-          desc: "Notion SDK is used to retrieve blog posts and present them in HTML format.",
+          desc: "Notion SDK is used to retrieve blog posts and present them in HTML format. Used for news updates and SEO reasons.",
         },
         {
           title: "Server side & Static generated pages",
@@ -171,9 +180,9 @@ export const projectData: ProjectData[] = [
       DevOps: [
         {
           title: "Deployment (Vercel)",
-          desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch."
-        }
-      ]
+          desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch.",
+        },
+      ],
     },
   },
   {
@@ -188,7 +197,12 @@ export const projectData: ProjectData[] = [
         {
           title: "UI Development (React Native - Typescript)",
           desc: "Cross platform solution for implementing the app's UI.",
-          links: [{ type: "source-code", url: "https://github.com/mountither/social-call-app-demo" }]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/social-call-app-demo",
+            },
+          ],
         },
         {
           title: "WebRTC (react-native-webrtc)",
@@ -209,7 +223,7 @@ export const projectData: ProjectData[] = [
   },
   {
     title: "Untitled website (Film/TV discovery + organiser)",
-    desc: "",
+    desc: "Browse through a large collection of film/tv catalogue. Users are able to create an account to review/rate and add entries in their watchlists.",
     link: "https://filmtv-idd.de/",
     bgColour: "bg-[#20c997]",
     category: "Web",
@@ -219,14 +233,28 @@ export const projectData: ProjectData[] = [
         {
           title: "App prototype (Figma)",
           desc: "UI & UX designs for app's screens and components.",
-          links: [{ type: "content", url: "https://www.figma.com/file/jQMkTrLZw7uMClisodsCCZ/Film.TV-web-app---designs?node-id=0%3A1" }],
+          links: [
+            {
+              type: "content",
+              url: "https://www.figma.com/file/jQMkTrLZw7uMClisodsCCZ/Film.TV-web-app---designs?node-id=0%3A1",
+            },
+          ],
         },
       ],
       Frontend: [
         {
           title: "UI Development (Vue JS - Typescript)",
           desc: "Implements of all screens and components.",
-          links: [{ type: "source-code", url: "https://github.com/mountither/filmtv-idd" }]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/filmtv-idd",
+            },
+          ],
+        },
+        {
+          title: "State Management (Vuex)",
+          desc: "Global state management solution used to store and mutate data such as; user session info and watchlist info.",
         },
       ],
       Backend: [
@@ -239,7 +267,7 @@ export const projectData: ProjectData[] = [
   },
   {
     title: "The Gentscave Barbershop",
-    desc: "Cross-platform (iOS and Android) film and tv social network app.",
+    desc: "Allows customers to make bookings at either 4 barbershop locations with a direct response from a manager.",
     image: BingeNabe,
     link: "https://thegentscavebarber.com.au/",
     bgColour: "bg-[#976b70]",
@@ -282,11 +310,16 @@ export const projectData: ProjectData[] = [
       ],
       Other: [
         {
-          title: "Product managment solution (Python/Flask microframework)",
+          title: "Product management solution (Python/Flask micro-framework)",
           desc: "Manager portal that allows for product information (details and images) to be inserted.",
-          links: [{ type: "source-code", url: "https://github.com/mountither/gcb-product-flask-service" }]
-        }
-      ]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/gcb-product-flask-service",
+            },
+          ],
+        },
+      ],
     },
   },
   {
@@ -295,18 +328,37 @@ export const projectData: ProjectData[] = [
     category: "Other",
     cardSize: "md",
     stack: {
-      "'Environment' project data analysis": [
+      "'Sustainability: Environment in Crisis' project": [
         {
-          title: "",
-          desc: "",
+          title: "Data Analysis (Jupyter Notebook)",
+          desc: "Cleaning and structuring of csv files to use in graphs. Web scraping data from various websites.",
+          links: [{ type: "source-code", url: "https://github.com/mountither/DataVizSite/blob/master/public/notebook/EnvironmentDataSiteAnalysis.ipynb" }],
+        },
+        {
+          title: "Website (HTML, JS, CSS)",
+          desc: "Includes graphs written in d3, Plotly and Leaflet.",
+          links: [
+            {
+              type: "content",
+              url: "https://statuesque-toffee-2a6e71.netlify.app/",
+            },
+          ],
         },
       ],
-      "Various machine learning algorithms": [
+      "Logistic & KMeans Models": [
         {
-          title: "",
-          desc: ""
+          title: "Data Analysis (Jupyter Notebook)",
+          desc: "Leveraging Numpy, Pandas and graph libs such as Seaborn to analyse wine data.",
+          links: [{ type: "source-code", url: "https://github.com/mountither/jupyter-notebooks-export/blob/main/Logistic_KMeans_Models.ipynb" }],
         },
       ],
+      // "Evaluation of various models (Car Park Data).": [
+      //   {
+      //     title: "Data Analysis (Jupyter Notebook)",
+      //     desc: "",
+      //     links: [{ type: "source-code", url: "" }],
+      //   },
+      // ],
     },
   },
   {
@@ -315,11 +367,22 @@ export const projectData: ProjectData[] = [
     category: "Other",
     cardSize: "md",
     stack: {
-      "": [
+      "Tools": [
         {
-          title: "",
-          desc: ""
-        }
+          title: "Better World Books price comparator",
+          desc: "Web scraper written in Python with the selenium library. This tool finds any price drops in books added in wishlist and uses smptp lib to send an email.",
+          links:[{type: "source-code" , url:"https://github.com/mountither/books-status-scrape/blob/main/book_site_scrape.py"}]
+        },
+        {
+          title: "Github workflow scraper",
+          desc: "Web scraper used to extract tests run on every push and output in csv for further analysis. Written in python.",
+          links:[{type: "source-code" , url:"https://github.com/mountither/workflows-scraper/blob/main/scraper.py"}]
+        },
+        {
+          title: "String search in multiple PDFs",
+          desc: "Fast way to find text in multiple pdf files in a given folder and returns a file location and page number. Written in C#.",
+          links:[{type: "source-code" , url:"https://github.com/mountither/pdf-string-search"}]
+        },
       ]
     },
   },
