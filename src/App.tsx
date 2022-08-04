@@ -18,7 +18,7 @@ function App() {
           </p>
         </div>
 
-        <div className="relative flex gap-5 justify-around flex-col sm:flex-row flex-wrap mt-10">
+        <div className="relative flex sm:gap-5 gap-10 justify-around flex-col sm:flex-row flex-wrap mt-10">
           {projectData.map((data) => (
             <ProjectCard
               key={data.title}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { MdClose, MdOutlineReadMore } from "react-icons/md";
 
@@ -22,7 +22,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className={`relative h-[500px] rounded-3xl select-none overflow-hidden w-full ${data.bgColour}
+      className={`relative sm:h-[500px] h-[450px] rounded-3xl select-none overflow-hidden w-full ${data.bgColour}
       ${data.cardSize === "md" ? `sm:w-[48%]` : ""}
       ${data.cardSize === "sm" ? `sm:w-[37%]` : ""}
       ${containerStyles}`}
@@ -44,10 +44,10 @@ const ProjectCard = ({
               ).map((category, i) => (
                 <div
                   key={category}
-                  className={`rounded-xl py-5 px-3 border-[1px] border-gray-200 border-opacity-5`}
+                  className={`rounded-xl py-2 px-3 border-[1px] border-gray-200 border-opacity-5`}
                 >
-                  <h1 className="text-sm font-bold">{category}</h1>
-                  <div className="mt-2">
+                  <h1 className="text-base">{category}</h1>
+                  <div className="mt-3">
                     {data?.stack[category] &&
                       data.stack[category]?.map((stack) => (
                         <div className="mb-3" key={stack.title}>
@@ -58,7 +58,7 @@ const ProjectCard = ({
                             <div className="flex flex-row item-center">
                               <p
                                 key={stack.title}
-                                className="text-sm font-medium underline"
+                                className="text-sm font-[700]"
                               >
                                 {stack.title}
                               </p>
@@ -69,7 +69,7 @@ const ProjectCard = ({
                                     const renderStackLinkIcon = () => {
                                       if (link.type === "source-code") {
                                         return (
-                                          <FaGithub size={15} color="white" />
+                                          <FaCode size={15} color="white" />
                                         );
                                       } else {
                                         return (
