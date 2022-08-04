@@ -1,10 +1,9 @@
-import autoAnimate from "@formkit/auto-animate";
-import { useEffect, useRef, useState } from "react";
-import { MdOutlineReadMore, MdClose } from "react-icons/md";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import { useState } from "react";
 import { FaGithub } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import { MdClose, MdOutlineReadMore } from "react-icons/md";
 
-import { ProjectData, TECH_STACK_BG_COLOURS } from "../fixtures/ProjectData";
+import { ProjectData } from "../fixtures/ProjectData";
 
 type ProjectCardProps = {
   containerStyles?: string;
@@ -20,11 +19,6 @@ const ProjectCard = ({
   data,
 }: ProjectCardProps) => {
   const [enableOverlay, setEnableOverlay] = useState<boolean>(false);
-  const iconParent = useRef(null);
-
-  useEffect(() => {
-    iconParent.current && autoAnimate(iconParent.current, { duration: 150 });
-  }, [iconParent]);
 
   return (
     <div
@@ -113,12 +107,11 @@ const ProjectCard = ({
       </div>
 
       <div
-        ref={iconParent}
         className={`absolute z-20 top-3 sm:right-4 right-3 ${!enableOverlay ? "bg-gray-200" : "bg-transparent"
           } bg-opacity-20 rounded-full p-1 hover:bg-opacity-30 transition duration-500 ease-in-out`}
       >
         <div
-          className="cursor-pointer"
+          className={`cursor-pointer`}
           key={`${enableOverlay}`}
           onClick={() => {
             if (Boolean(window.navigator.vibrate)) {
