@@ -244,7 +244,7 @@ export const projectData: ProjectData[] = [
       Frontend: [
         {
           title: "UI Development (Vue JS - Typescript)",
-          desc: "Implements of all screens and components.",
+          desc: "Implements of all screens and components. Bootstrap is used as the CSS framework.",
           links: [
             {
               type: "source-code",
@@ -261,6 +261,12 @@ export const projectData: ProjectData[] = [
         {
           title: "BaaS (Firebase)",
           desc: "Services include: Authentication (email/password), Database/Storage and Cloud functions.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Hosting (Netlify)",
+          desc: "A suitable hosting solution for static and serverless (in this case) websites.",
         },
       ],
     },
