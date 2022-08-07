@@ -4,7 +4,7 @@ import GithubLogo from "../../assets/github-logo.png";
 const Header = () => {
   return (
     <>
-      <div className="w-full mb-20 top-0 sticky bg-white/50 pb-2 backdrop-blur-3xl z-[1000]">
+      <div className="w-full mb-12 sm:mb-16 top-0 sticky bg-white/50 pb-2 backdrop-blur-3xl z-[1000]">
         <Container>
           <div className="flex flex-row justify-between">
             <p className="text-base font-bold">
