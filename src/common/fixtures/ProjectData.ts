@@ -70,11 +70,15 @@ export const projectData: ProjectData[] = [
           title: "State Management (Redux + Redux toolkit + Persist)",
           desc: "Redux is used to manage and store shareable state where necessary.",
         },
+        {
+          title: "Comment section",
+          desc: "A comment section is implemented for 'topics' and 'watchlists'. The 'chat-like' comment section leverages firestore's database listeners with a custom implementation of bidirectional on-scroll pagination.",
+        },
       ],
       Backend: [
         {
           title: "BaaS (Firebase)",
-          desc: "'Quick setup' backend solution. Services utilised: Authentication (inc. 3rd party registration), Database/Storage, Cloud functions, Push notification capability and Beta builds distribution.",
+          desc: "Backend solution. Services utilised: Authentication (inc. 3rd party registration), Database/Storage, Cloud functions, Push notification capability and Beta builds distribution.",
         },
         {
           title: "Email Delivery (SendGrid)",
@@ -92,7 +96,13 @@ export const projectData: ProjectData[] = [
         },
         {
           title: "CodePush",
-          desc: "Used to deploy updates to the app without rebuilding and redeploying to the App Store or Play Store. This tool is very useful in addressing bugs and small features in timely manner without the hassle of application reviews and build times.",
+          desc: "Used to deploy updates to the current app version without rebuilding/redeploying to the App Store or Play Store. This tool is very useful in addressing bugs and small features in a timely manner without the hassle of application reviews and build times.",
+        },
+      ],
+      Other: [
+        {
+          title: "Companion website (Next JS)",
+          desc: "Promotes the app and provides links to the app store and play store. Documents such as Terms of use and Privacy policy are stored via Markdown. In addition, a support form is used to allow users to send questions (easily setup with Next JS's API routes).",
         },
       ],
     },
@@ -183,6 +193,13 @@ export const projectData: ProjectData[] = [
           desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch.",
         },
       ],
+      Other: [
+        {
+          title: "Admin Portal (Svelte)",
+          desc: "A 'serverless' (invokes cloud functions) website that allows admin to create managers accounts for main site using the Svelte frontend framework.",
+          links:[{type:"source-code", url:"https://github.com/mountither/cbh-admin-portal"}]
+        },
+      ],
     },
   },
   {
@@ -222,7 +239,7 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    title: "Untitled website (Film/TV discovery + organiser)",
+    title: "Film/TV discovery + organiser",
     desc: "Browse through a large collection of film/tv catalogue. Users are able to create an account to review/rate and add entries in their watchlists.",
     link: "https://filmtv-idd.de/",
     bgColour: "bg-[#20c997]",
@@ -266,7 +283,7 @@ export const projectData: ProjectData[] = [
       DevOps: [
         {
           title: "Hosting (Netlify)",
-          desc: "A suitable hosting solution for static and serverless (in this case) websites.",
+          desc: "A suitable hosting solution for static and 'serverless' (in this case) websites.",
         },
       ],
     },

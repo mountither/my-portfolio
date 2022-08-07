@@ -3,6 +3,7 @@ import ProjectCard from "./common/components/ProjectCard";
 import { projectData } from "./common/fixtures/ProjectData";
 import Container from "./common/layout/Container";
 import { chance } from "./common/utils/MockData";
+import { CgCornerRightDown } from "react-icons/cg";
 
 function App() {
   return (
@@ -10,15 +11,26 @@ function App() {
       <Header />
       <Container containerStyles="text-black">
         <div className="px-2">
-          <h1 className="text-4xl mb-1">
-            <span className="font-bold">Full Stack Web & Mobile Developer </span>
+          <h1 className="text-2xl sm:text-4xl mb-1">
+            <span className="font-bold">
+              Full Stack Web & Mobile Developer{" "}
+            </span>
           </h1>
-          <p className="text-base font-medium mt-5">
-            Interested in mobile and web development. I have 3 years experience with the react js and react native frameworks. The following are projects I have developed ↓
+          <p className="text-sm sm:text-base font-medium mt-5">
+            Interested in mobile and web development. I have 3+ years experience
+            with react frameworks (React, React Native & Next JS) with
+            Typescript, in addition to backend frameworks/services such as; Node JS and
+            Firebase.
+            <div className="flex flex-row items-end flex-wrap mt-2">
+              <p className="pb-2">
+                The following are projects I have developed
+              </p>
+              <CgCornerRightDown size={25} className="text-blue-400 ml-2" />
+            </div>
           </p>
         </div>
 
-        <div className="relative flex sm:gap-5 gap-10 justify-around flex-col sm:flex-row flex-wrap mt-10">
+        <div className="relative flex sm:gap-5 gap-10 justify-around flex-col sm:flex-row flex-wrap mt-12">
           {projectData.map((data) => (
             <ProjectCard
               key={data.title}
