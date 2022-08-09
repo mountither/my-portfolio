@@ -205,7 +205,7 @@ export const projectData: ProjectData[] = [
   {
     title: "VoIP calling app",
     desc: "A proof of concept project that implements WebRTC that allows users to request one-on-one voice calls.",
-    link: "https://github.com/mountither/social-call-app-demo",
+    link: "https://github.com/mountither/voip-app",
     bgColour: "bg-[#34B7F1]",
     category: "Mobile",
     cardSize: "md",
@@ -217,7 +217,7 @@ export const projectData: ProjectData[] = [
           links: [
             {
               type: "source-code",
-              url: "https://github.com/mountither/social-call-app-demo",
+              url: "https://github.com/mountither/voip-app",
             },
           ],
         },

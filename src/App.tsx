@@ -17,11 +17,12 @@ function App() {
             </span>
           </h1>
           <p className="text-sm sm:text-base font-medium mt-5">
-            Interested in mobile and web development. I have 3+ years experience
-            with react frameworks (React, React Native & Next JS) with
+            Passionate about mobile and web development. 
+            <p className="my-1">I enjoy learning new ways of developing software.</p>
+            I have 3+ years experience with react frameworks (React, React Native & Next JS) with
             Typescript, in addition to backend frameworks/services such as; Node JS and
             Firebase.
-            <div className="flex flex-row items-end flex-wrap mt-2">
+            <div className="flex flex-row items-end flex-wrap mt-1">
               <p className="pb-2">
                 The following are projects I have developed
               </p>
