@@ -7,9 +7,9 @@ import { CgCornerRightDown } from "react-icons/cg";
 
 function App() {
   return (
-    <div className="pb-20">
+    <div className="pb-20 pt-16">
       <Header />
-      <Container containerStyles="text-black">
+      <Container containerStyles="text-black main-content">
         <div className="px-2">
           <h1 className="text-2xl sm:text-4xl mb-1">
             <span className="font-bold">
@@ -19,7 +19,7 @@ function App() {
           <p className="text-sm sm:text-base font-medium mt-5">
             Passionate about mobile and web development. 
             <p className="my-1">I enjoy learning new ways of developing software.</p>
-            I have 3+ years experience with react frameworks (React, React Native & Next JS) with
+            I have 5+ years experience with react frameworks (React, React Native & Next JS) with
             Typescript, in addition to backend frameworks/services such as; Node JS and
             Firebase.
             <div className="flex flex-row items-end flex-wrap mt-1">
