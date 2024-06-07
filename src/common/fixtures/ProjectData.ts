@@ -1,5 +1,3 @@
-import BingeNabe from "@/assets/bingenabe-logo.png";
-
 export type StackCategories =
   | "Design"
   | "Frontend"
@@ -18,7 +16,7 @@ export type ProjectData = {
   desc?: string;
   image?: string;
   sourceCode?: string;
-  link?: string;
+  links?: Array<string>;
   cardSize: "sm" | "md" | "lg";
   bgColour: string;
   category: string;
@@ -40,8 +38,7 @@ export const projectData: ProjectData[] = [
     title: "BingeNabe",
     desc: "Cross-platform (iOS and Android) film and tv social network app.",
     category: "Mobile",
-    image: BingeNabe,
-    link: "https://www.bingenabe.app/",
+    links: ["https://www.bingenabe.app/"],
     bgColour: "bg-[#43afa2]",
     cardSize: "lg",
     stack: {
@@ -110,7 +107,7 @@ export const projectData: ProjectData[] = [
   {
     title: "Historical Mesopotamia",
     desc: "Scrapes wikipedia based data and presents it on a timeline. Each historical era is used to query museum artifacts from 6 museums.",
-    link: "https://www.historicalmesopotamia.com",
+    links: ["https://www.historicalmesopotamia.com"],
     category: "Web",
     bgColour: "bg-[#566d8c]",
     cardSize: "md",
@@ -144,68 +141,9 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    title: "Corner Barber House",
-    desc: "A business solution that allows customers to make and manage bookings.",
-    link: "https://www.cornerbarberhouse.com.au/",
-    bgColour: "bg-[#d1b46f]",
-    category: "Web",
-    cardSize: "md",
-    stack: {
-      Design: [
-        {
-          title: "App prototype (Adobe XD)",
-          desc: "UI & UX designs for the website's screens, components and other implementations.",
-          links: [
-            {
-              type: "content",
-              url: "https://xd.adobe.com/view/a2c04378-4197-462d-adcc-d8a6f53918da-f793/",
-            },
-          ],
-        },
-      ],
-      Frontend: [
-        {
-          title: "UI Development (Next JS - Typescript)",
-          desc: "A react framework used to render static and server rendered pages. Custom booking form/calendar.",
-        },
-        {
-          title: "Blog",
-          desc: "Notion SDK is used to retrieve blog posts and present them in HTML format. Used for news updates and SEO reasons.",
-        },
-        {
-          title: "Server side & Static generated pages",
-          desc: "Server side rendered pages include: manager's and customer's pages (check user roles on server). Statically generated pages include: About, Contact, Blog, etc. These rendering methods help with SEO and page performance.",
-        },
-      ],
-      Backend: [
-        {
-          title: "BaaS (Firebase)",
-          desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage and Cloud functions.",
-        },
-        {
-          title: "Database",
-          desc: "Realtime updates to booking times when user is selecting date/time. User details on authentication.",
-        },
-      ],
-      DevOps: [
-        {
-          title: "Deployment (Vercel)",
-          desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch.",
-        },
-      ],
-      Other: [
-        {
-          title: "Admin Portal (Svelte)",
-          desc: "A 'serverless' (invokes cloud functions) website that allows admin to create managers accounts for main site using the Svelte frontend framework.",
-          links:[{type:"source-code", url:"https://github.com/mountither/cbh-admin-portal"}]
-        },
-      ],
-    },
-  },
-  {
     title: "VoIP calling app",
     desc: "A proof of concept project that implements WebRTC that allows users to request one-on-one voice calls.",
-    link: "https://github.com/mountither/voip-app",
+    links: ["https://github.com/mountither/voip-app"],
     bgColour: "bg-[#34B7F1]",
     category: "Mobile",
     cardSize: "md",
@@ -239,9 +177,65 @@ export const projectData: ProjectData[] = [
     },
   },
   {
+    title: "ePatientKeeper",
+    desc: "A comprehensive web application for managing patient data, prescriptions, and medical records, optimized for both desktop and mobile use.",
+    category: "Web/PWA",
+    bgColour: "bg-[#b0af7f]",
+    links: ["https://epatientkeeper.com"],
+    cardSize: "lg",
+    stack: {
+      Design: [
+        {
+          title: "Responsive Design",
+          desc: "Optimized for both desktop and mobile platforms, ensuring a seamless user experience across devices.",
+        },
+      ],
+      Frontend: [
+        {
+          title: "UI Development (React - Typescript)",
+          desc: "Implemented a user-friendly interface for managing patient data and prescriptions.",
+        },
+        {
+          title: "State Management (React Hook Form)",
+          desc: "Ensured efficient state management for patient data input and form handling.",
+        },
+        {
+          title: "OCR Integration (Google Vertex AI)",
+          desc: "Integrated OCR capabilities to automatically detect and position fields on medical prescriptions.",
+        },
+        {
+          title: "Localization (i18n)",
+          desc: "Supported multiple languages to cater to a diverse user base.",
+        },
+      ],
+      Backend: [
+        {
+          title: "BaaS (Firebase)",
+          desc: "Utilized Firebase for Authentication, Firestore for Database, and Cloud Storage for storing medical records.",
+        },
+        {
+          title: "API (Google Vertex AI)",
+          desc: "Used Google Vertex AI for OCR to extract positions of fields on medical prescriptions.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (Vercel)",
+          desc: "Deployed the application on Vercel, ensuring continuous integration and deployment.",
+        },
+      ],
+      Other: [
+        {
+          title: "Statistics",
+          desc: "Managed over 1,500 patient records, generated 2,000+ successful prescriptions, and supported 5 doctors using the platform.",
+        },
+      ],
+    },
+  },
+  {
     title: "Film/TV discovery + organiser",
     desc: "Browse through a large collection of film/tv catalogue. Users are able to create an account to review/rate and add entries in their watchlists.",
-    link: "https://filmtv-idd.de/",
+    links: ["https://filmtv-idd.netlify.app/"],
     bgColour: "bg-[#20c997]",
     category: "Web",
     cardSize: "md",
@@ -289,15 +283,41 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    title: "The Gentscave Barbershop",
-    desc: "Allows customers to make bookings at either 4 barbershop locations with a direct response from a manager.",
-    image: BingeNabe,
-    link: "https://thegentscavebarber.com.au/",
+    title: "Barber Software Solutions",
+    desc: "Business solutions that allow customers to make and manage bookings for barbershops.",
+    links: [
+      "https://www.cornerbarberhouse.com.au/",
+      "https://thegentscavebarber.com.au/",
+    ],
     bgColour: "bg-[#976b70]",
     category: "Web",
-    cardSize: "lg",
+    cardSize: "md",
     stack: {
+      Design: [
+        {
+          title: "App prototype (Adobe XD)",
+          desc: "UI & UX designs for the website's screens, components and other implementations.",
+          links: [
+            {
+              type: "content",
+              url: "https://xd.adobe.com/view/a2c04378-4197-462d-adcc-d8a6f53918da-f793/",
+            },
+          ],
+        },
+      ],
       Frontend: [
+        {
+          title: "UI Development (Next JS - Typescript)",
+          desc: "A react framework used to render static and server rendered pages. Custom booking form/calendar.",
+        },
+        {
+          title: "Blog",
+          desc: "Notion SDK is used to retrieve blog posts and present them in HTML format. Used for news updates and SEO reasons.",
+        },
+        {
+          title: "Server side & Static generated pages",
+          desc: "Server side rendered pages include: manager's and customer's pages (check user roles on server). Statically generated pages include: About, Contact, Blog, etc. These rendering methods help with SEO and page performance.",
+        },
         {
           title: "UI Development (React JS)",
           desc: "Implements pages and components with styling by sass preprocesser.",
@@ -305,12 +325,30 @@ export const projectData: ProjectData[] = [
       ],
       Backend: [
         {
-          title: "Database (MongoDB)",
-          desc: "Stores and analyses product and booking data in NoSQL format.",
+          title: "BaaS (Firebase)",
+          desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage and Cloud functions.",
+        },
+        {
+          title: "Database",
+          desc: "Realtime updates to booking times when user is selecting date/time. User details on authentication. Stores and analyses product and booking data in NoSQL format.",
         },
         {
           title: "IaaS (Google Compute Engine)",
           desc: "Hosts and runs docker images that consist of the frontend (reactjs), backend framework (nodejs) and web server (nginx)",
+        },
+        {
+          title: "Email delivery (SendGrid)",
+          desc: "Sends email to managers when booking is made. Sends customer email on response (accept/reject).",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (Vercel)",
+          desc: "Website is hosted on Vercel. Github actions used to manage versioning, releases and deployments on push to main branch.",
+        },
+        {
+          title: "Containers (Docker)",
+          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
         },
         {
           title: "HTTPS certification (Let's Encrypt)",
@@ -320,18 +358,18 @@ export const projectData: ProjectData[] = [
           title: "Reverse Proxy and Web server (nginx)",
           desc: "Used to serve the appropriate responses of website pages with correct ssl certificates and external links via email. Reverse proxy is used to direct users from port 80 (http) to port 443 (https).",
         },
-        {
-          title: "Email delivery (SendGrid)",
-          desc: "Sends email to managers when booking is made. Sends customer email on response (accept/reject).",
-        },
-      ],
-      DevOps: [
-        {
-          title: "Containers (Docker)",
-          desc: "Used to automate deployment and cohesively integrate the frontend and backend together in development and production environments.",
-        },
       ],
       Other: [
+        {
+          title: "Admin Portal (Svelte)",
+          desc: "A 'serverless' (invokes cloud functions) website that allows admin to create managers accounts for main site using the Svelte frontend framework.",
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/cbh-admin-portal",
+            },
+          ],
+        },
         {
           title: "Product management solution (Python/Flask micro-framework)",
           desc: "Manager portal that allows for product information (details and images) to be inserted.",
@@ -341,6 +379,10 @@ export const projectData: ProjectData[] = [
               url: "https://github.com/mountither/gcb-product-flask-service",
             },
           ],
+        },
+        {
+          title: "Statistics",
+          desc: "Currently 500+ of bookings are made monthly across both applications and all 5 barbershop locations.",
         },
       ],
     },
@@ -355,7 +397,12 @@ export const projectData: ProjectData[] = [
         {
           title: "Data Analysis (Jupyter Notebook)",
           desc: "Cleaning and structuring of csv files to use in graphs. Web scraping data from various websites.",
-          links: [{ type: "source-code", url: "https://github.com/mountither/DataVizSite/blob/master/public/notebook/EnvironmentDataSiteAnalysis.ipynb" }],
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/DataVizSite/blob/master/public/notebook/EnvironmentDataSiteAnalysis.ipynb",
+            },
+          ],
         },
         {
           title: "Website (HTML, JS, CSS)",
@@ -372,7 +419,12 @@ export const projectData: ProjectData[] = [
         {
           title: "Data Analysis (Jupyter Notebook)",
           desc: "Leveraging Numpy, Pandas and graph libs such as Seaborn to analyse wine data.",
-          links: [{ type: "source-code", url: "https://github.com/mountither/jupyter-notebooks-export/blob/main/Logistic_KMeans_Models.ipynb" }],
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/jupyter-notebooks-export/blob/main/Logistic_KMeans_Models.ipynb",
+            },
+          ],
         },
       ],
       // "Evaluation of various models (Car Park Data).": [
@@ -390,23 +442,38 @@ export const projectData: ProjectData[] = [
     category: "Other",
     cardSize: "md",
     stack: {
-      "Tools": [
+      Tools: [
         {
           title: "Better World Books price comparator",
           desc: "Web scraper written in Python with the selenium library. This tool finds any price drops in books added in wishlist and uses smptp lib to send an email.",
-          links:[{type: "source-code" , url:"https://github.com/mountither/books-status-scrape/blob/main/book_site_scrape.py"}]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/books-status-scrape/blob/main/book_site_scrape.py",
+            },
+          ],
         },
         {
           title: "Github workflow scraper",
           desc: "Web scraper used to extract tests run on every push and output in csv for further analysis. Written in python.",
-          links:[{type: "source-code" , url:"https://github.com/mountither/workflows-scraper/blob/main/scraper.py"}]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/workflows-scraper/blob/main/scraper.py",
+            },
+          ],
         },
         {
           title: "String search in multiple PDFs",
           desc: "Fast way to find text in multiple pdf files in a given folder and returns a file location and page number. Written in C#.",
-          links:[{type: "source-code" , url:"https://github.com/mountither/pdf-string-search"}]
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/pdf-string-search",
+            },
+          ],
         },
-      ]
+      ],
     },
   },
 ];
