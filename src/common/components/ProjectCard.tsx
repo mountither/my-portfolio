@@ -138,7 +138,7 @@ const ProjectCard = ({
               className="cursor-pointer hover:opacity-50 z-20 transition-opacity duration-200 ease-in-out"
             >
               <HiOutlineExternalLink
-                size={22}
+                size={30}
                 color={`${enableOverlay ? "#e0e0e0" : "#3b3b3b"}`}
                 className={"transition-all  duration-200 ease-in-out"}
               />
