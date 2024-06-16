@@ -105,6 +105,62 @@ export const projectData: ProjectData[] = [
     },
   },
   {
+    title: "ePatientKeeper",
+    desc: "A comprehensive web application for managing patient data, prescriptions, and medical records, optimized for both desktop and mobile use.",
+    category: "Web/PWA",
+    bgColour: "bg-[#b0af7f]",
+    links: ["https://epatientkeeper.com"],
+    cardSize: "lg",
+    stack: {
+      Design: [
+        {
+          title: "Responsive Design",
+          desc: "Optimized for both desktop and mobile platforms, ensuring a seamless user experience across devices.",
+        },
+      ],
+      Frontend: [
+        {
+          title: "UI Development (React - Typescript)",
+          desc: "Implemented a user-friendly interface for managing patient data and prescriptions.",
+        },
+        {
+          title: "State Management (React Hook Form)",
+          desc: "Ensured efficient state management for patient data input and form handling.",
+        },
+        {
+          title: "OCR Integration (Google Vertex AI)",
+          desc: "Integrated OCR capabilities to automatically detect and position fields on medical prescriptions.",
+        },
+        {
+          title: "Localization (i18n)",
+          desc: "Supported multiple languages to cater to a diverse user base.",
+        },
+      ],
+      Backend: [
+        {
+          title: "BaaS (Firebase)",
+          desc: "Utilized Firebase for Authentication, Firestore for Database, and Cloud Storage for storing medical records.",
+        },
+        {
+          title: "API (Google Vertex AI)",
+          desc: "Used Google Vertex AI for OCR to extract positions of fields on medical prescriptions.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (Vercel)",
+          desc: "Deployed the application on Vercel, ensuring continuous integration and deployment.",
+        },
+      ],
+      Other: [
+        {
+          title: "Statistics",
+          desc: "Managed over 1,500 patient records, generated 2,000+ successful prescriptions, and supported 5 doctors using the platform.",
+        },
+      ],
+    },
+  },
+  {
     title: "Historical Mesopotamia",
     desc: "Scrapes wikipedia based data and presents it on a timeline. Each historical era is used to query museum artifacts from 6 museums.",
     links: ["https://www.historicalmesopotamia.com"],
@@ -172,62 +228,6 @@ export const projectData: ProjectData[] = [
         {
           title: "BaaS (Firebase)",
           desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage (store user data and act as a signalling server) and Cloud functions",
-        },
-      ],
-    },
-  },
-  {
-    title: "ePatientKeeper",
-    desc: "A comprehensive web application for managing patient data, prescriptions, and medical records, optimized for both desktop and mobile use.",
-    category: "Web/PWA",
-    bgColour: "bg-[#b0af7f]",
-    links: ["https://epatientkeeper.com"],
-    cardSize: "lg",
-    stack: {
-      Design: [
-        {
-          title: "Responsive Design",
-          desc: "Optimized for both desktop and mobile platforms, ensuring a seamless user experience across devices.",
-        },
-      ],
-      Frontend: [
-        {
-          title: "UI Development (React - Typescript)",
-          desc: "Implemented a user-friendly interface for managing patient data and prescriptions.",
-        },
-        {
-          title: "State Management (React Hook Form)",
-          desc: "Ensured efficient state management for patient data input and form handling.",
-        },
-        {
-          title: "OCR Integration (Google Vertex AI)",
-          desc: "Integrated OCR capabilities to automatically detect and position fields on medical prescriptions.",
-        },
-        {
-          title: "Localization (i18n)",
-          desc: "Supported multiple languages to cater to a diverse user base.",
-        },
-      ],
-      Backend: [
-        {
-          title: "BaaS (Firebase)",
-          desc: "Utilized Firebase for Authentication, Firestore for Database, and Cloud Storage for storing medical records.",
-        },
-        {
-          title: "API (Google Vertex AI)",
-          desc: "Used Google Vertex AI for OCR to extract positions of fields on medical prescriptions.",
-        },
-      ],
-      DevOps: [
-        {
-          title: "Deployment (Vercel)",
-          desc: "Deployed the application on Vercel, ensuring continuous integration and deployment.",
-        },
-      ],
-      Other: [
-        {
-          title: "Statistics",
-          desc: "Managed over 1,500 patient records, generated 2,000+ successful prescriptions, and supported 5 doctors using the platform.",
         },
       ],
     },
