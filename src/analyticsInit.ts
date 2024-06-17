@@ -1,7 +1,7 @@
 import Analytics from "analytics";
 import googleAnalytics from "@analytics/google-analytics";
 
-const measurementIds = ["G-9HM886EPQD"]; // ensure this is your actual GA4 Measurement ID
+const measurementIds = ["G-YVXLV3QHMF"]; // ensure this is your actual GA4 Measurement ID
 
 if (!measurementIds) {
   throw new Error("No GA Measurement ID defined");
