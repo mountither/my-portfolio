@@ -8,7 +8,7 @@ if (!measurementIds) {
 }
 
 const analytics = Analytics({
-  app: "my-portfolio",
+  app: "my portfolio",
   plugins: [
     googleAnalytics({
       measurementIds, // this should be a valid tracking ID
