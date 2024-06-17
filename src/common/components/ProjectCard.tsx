@@ -30,7 +30,7 @@ const ProjectCard = ({
   };
 
   const handleLinkClick = (url: string) => {
-    track("External Link Clicked", { url });
+    track("ExternalLinkClicked", { url });
   };
   return (
     <div
