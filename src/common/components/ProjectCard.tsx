@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCode } from "react-icons/fa";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { MdClose, MdOutlineReadMore } from "react-icons/md";
 
 import { ProjectData } from "../fixtures/ProjectData";
+import { useAnalytics } from "use-analytics";
 
 type ProjectCardProps = {
   containerStyles?: string;
@@ -19,7 +20,18 @@ const ProjectCard = ({
   data,
 }: ProjectCardProps) => {
   const [enableOverlay, setEnableOverlay] = useState<boolean>(false);
+  const { track } = useAnalytics();
 
+  const handleCardClick = () => {
+    if (!enableOverlay) {
+      track("CardClicked", { title: data.title });
+    }
+    setEnableOverlay(!enableOverlay);
+  };
+
+  const handleLinkClick = (url: string) => {
+    track("External Link Clicked", { url });
+  };
   return (
     <div
       className={`relative sm:h-[500px] h-[450px] rounded-3xl select-none overflow-hidden w-full ${
@@ -84,6 +96,9 @@ const ProjectCard = ({
                                         <a
                                           key={stack.title}
                                           href={link.url}
+                                          onClick={() =>
+                                            handleLinkClick(link.url)
+                                          }
                                           target={"_blank"}
                                           className={`p-1 bg-black bg-opacity-40 rounded-full hover:opacity-40 transition-all duration-200 ease-in-out`}
                                         >
@@ -115,12 +130,7 @@ const ProjectCard = ({
         <div
           className={`cursor-pointer`}
           key={`${enableOverlay}`}
-          onClick={() => {
-            if (Boolean(window.navigator.vibrate)) {
-              navigator.vibrate(50);
-            }
-            setEnableOverlay(!enableOverlay);
-          }}
+          onClick={handleCardClick}
         >
           {!enableOverlay ? (
             <MdOutlineReadMore className={`text-white ${iconStyles} w-7 h-7`} />
@@ -134,6 +144,7 @@ const ProjectCard = ({
           {data.links.map((link) => (
             <a
               href={link}
+              onClick={() => handleLinkClick(link)}
               target={"_blank"}
               className="cursor-pointer hover:opacity-50 z-20 transition-opacity duration-200 ease-in-out"
             >

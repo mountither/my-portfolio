@@ -9,9 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@analytics/google-analytics": "^1.0.7",
+    "@types/google.analytics": "^0.0.46",
+    "@types/use-analytics": "^0.0.3",
+    "analytics": "^0.8.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0"
+    "react-icons": "^4.4.0",
+    "use-analytics": "^1.1.0"
   },
   "devDependencies": {
     "@types/chance": "^1.1.3",
