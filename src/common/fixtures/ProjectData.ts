@@ -161,128 +161,6 @@ export const projectData: ProjectData[] = [
     },
   },
   {
-    title: "Historical Mesopotamia",
-    desc: "Scrapes wikipedia based data and presents it on a timeline. Each historical era is used to query museum artifacts from 6 museums.",
-    links: ["https://www.historicalmesopotamia.com"],
-    category: "Web",
-    bgColour: "bg-[#566d8c]",
-    cardSize: "md",
-    stack: {
-      Frontend: [
-        {
-          title: "Development (React JS)",
-          desc: "Used to implement components found on two screens and drawer. Styling implemented with Chakra UI and GSAP.",
-          links: [
-            {
-              type: "source-code",
-              url: "https://github.com/mountither/museum-web-app",
-            },
-          ],
-        },
-        {
-          title: "State management",
-          desc: "Session storage used to cache some of timeline and gallery data. React in-built state management; Context API (consumes gallery state) and Reducer (used to organise state).",
-        },
-        {
-          title: "APIs consumed",
-          desc: "This site uses wikipedia api to fetch data for timeline and other information presented in the drawer. Museum APIs include: The MET, Victoria and Albert Museum, Harvard Art Museums, Science Museum Group, Museums Victoria and Arts Institute Chicago.",
-        },
-      ],
-      DevOps: [
-        {
-          title: "Deployment (Vercel)",
-          desc: "Vercel is the host for this site. Deployment is updated every time changes are pushed to main branch.",
-        },
-      ],
-    },
-  },
-  {
-    title: "VoIP calling app",
-    desc: "A proof of concept project that implements WebRTC that allows users to request one-on-one voice calls.",
-    links: ["https://github.com/mountither/voip-app"],
-    bgColour: "bg-[#34B7F1]",
-    category: "Mobile",
-    cardSize: "md",
-    stack: {
-      Frontend: [
-        {
-          title: "UI Development (React Native - Typescript)",
-          desc: "Cross platform solution for implementing the app's UI.",
-          links: [
-            {
-              type: "source-code",
-              url: "https://github.com/mountither/voip-app",
-            },
-          ],
-        },
-        {
-          title: "WebRTC (react-native-webrtc)",
-          desc: "WebRTC implementation library for react native.",
-        },
-        {
-          title: "State Management",
-          desc: "Redux used to manage call state such as; session meta data and whether calls are answered/ended/muted. The intent is to have the call opened while navigating throughout the app while having the call functionality available.",
-        },
-      ],
-      Backend: [
-        {
-          title: "BaaS (Firebase)",
-          desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage (store user data and act as a signalling server) and Cloud functions",
-        },
-      ],
-    },
-  },
-  {
-    title: "Film/TV discovery + organiser",
-    desc: "Browse through a large collection of film/tv catalogue. Users are able to create an account to review/rate and add entries in their watchlists.",
-    links: ["https://filmtv-idd.netlify.app/"],
-    bgColour: "bg-[#20c997]",
-    category: "Web",
-    cardSize: "md",
-    stack: {
-      Design: [
-        {
-          title: "App prototype (Figma)",
-          desc: "UI & UX designs for app's screens and components.",
-          links: [
-            {
-              type: "content",
-              url: "https://www.figma.com/file/jQMkTrLZw7uMClisodsCCZ/Film.TV-web-app---designs?node-id=0%3A1",
-            },
-          ],
-        },
-      ],
-      Frontend: [
-        {
-          title: "UI Development (Vue JS - Typescript)",
-          desc: "Implements of all screens and components. Bootstrap is used as the CSS framework.",
-          links: [
-            {
-              type: "source-code",
-              url: "https://github.com/mountither/filmtv-idd",
-            },
-          ],
-        },
-        {
-          title: "State Management (Vuex)",
-          desc: "Global state management solution used to store and mutate data such as; user session info and watchlist info.",
-        },
-      ],
-      Backend: [
-        {
-          title: "BaaS (Firebase)",
-          desc: "Services include: Authentication (email/password), Database/Storage and Cloud functions.",
-        },
-      ],
-      DevOps: [
-        {
-          title: "Hosting (Netlify)",
-          desc: "A suitable hosting solution for static and 'serverless' (in this case) websites.",
-        },
-      ],
-    },
-  },
-  {
     title: "Barber Software Solutions",
     desc: "Business solutions that allow customers to make and manage bookings for barbershops.",
     links: [
@@ -383,6 +261,128 @@ export const projectData: ProjectData[] = [
         {
           title: "Statistics",
           desc: "Currently 500+ of bookings are made monthly across both applications and all 5 barbershop locations.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Film/TV discovery + organiser",
+    desc: "Browse through a large collection of film/tv catalogue. Users are able to create an account to review/rate and add entries in their watchlists.",
+    links: ["https://filmtv-idd.netlify.app/"],
+    bgColour: "bg-[#20c997]",
+    category: "Web",
+    cardSize: "md",
+    stack: {
+      Design: [
+        {
+          title: "App prototype (Figma)",
+          desc: "UI & UX designs for app's screens and components.",
+          links: [
+            {
+              type: "content",
+              url: "https://www.figma.com/file/jQMkTrLZw7uMClisodsCCZ/Film.TV-web-app---designs?node-id=0%3A1",
+            },
+          ],
+        },
+      ],
+      Frontend: [
+        {
+          title: "UI Development (Vue JS - Typescript)",
+          desc: "Implements of all screens and components. Bootstrap is used as the CSS framework.",
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/filmtv-idd",
+            },
+          ],
+        },
+        {
+          title: "State Management (Vuex)",
+          desc: "Global state management solution used to store and mutate data such as; user session info and watchlist info.",
+        },
+      ],
+      Backend: [
+        {
+          title: "BaaS (Firebase)",
+          desc: "Services include: Authentication (email/password), Database/Storage and Cloud functions.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Hosting (Netlify)",
+          desc: "A suitable hosting solution for static and 'serverless' (in this case) websites.",
+        },
+      ],
+    },
+  },
+  {
+    title: "Historical Mesopotamia",
+    desc: "Scrapes wikipedia based data and presents it on a timeline. Each historical era is used to query museum artifacts from 6 museums.",
+    links: ["https://www.historicalmesopotamia.com"],
+    category: "Web",
+    bgColour: "bg-[#566d8c]",
+    cardSize: "md",
+    stack: {
+      Frontend: [
+        {
+          title: "Development (React JS)",
+          desc: "Used to implement components found on two screens and drawer. Styling implemented with Chakra UI and GSAP.",
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/museum-web-app",
+            },
+          ],
+        },
+        {
+          title: "State management",
+          desc: "Session storage used to cache some of timeline and gallery data. React in-built state management; Context API (consumes gallery state) and Reducer (used to organise state).",
+        },
+        {
+          title: "APIs consumed",
+          desc: "This site uses wikipedia api to fetch data for timeline and other information presented in the drawer. Museum APIs include: The MET, Victoria and Albert Museum, Harvard Art Museums, Science Museum Group, Museums Victoria and Arts Institute Chicago.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (Vercel)",
+          desc: "Vercel is the host for this site. Deployment is updated every time changes are pushed to main branch.",
+        },
+      ],
+    },
+  },
+  {
+    title: "VoIP calling app",
+    desc: "A proof of concept project that implements WebRTC that allows users to request one-on-one voice calls.",
+    links: ["https://github.com/mountither/voip-app"],
+    bgColour: "bg-[#34B7F1]",
+    category: "Mobile",
+    cardSize: "md",
+    stack: {
+      Frontend: [
+        {
+          title: "UI Development (React Native - Typescript)",
+          desc: "Cross platform solution for implementing the app's UI.",
+          links: [
+            {
+              type: "source-code",
+              url: "https://github.com/mountither/voip-app",
+            },
+          ],
+        },
+        {
+          title: "WebRTC (react-native-webrtc)",
+          desc: "WebRTC implementation library for react native.",
+        },
+        {
+          title: "State Management",
+          desc: "Redux used to manage call state such as; session meta data and whether calls are answered/ended/muted. The intent is to have the call opened while navigating throughout the app while having the call functionality available.",
+        },
+      ],
+      Backend: [
+        {
+          title: "BaaS (Firebase)",
+          desc: "Services include: Authentication (inc. 3rd party registration), Database/Storage (store user data and act as a signalling server) and Cloud functions",
         },
       ],
     },
