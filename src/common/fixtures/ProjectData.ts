@@ -161,6 +161,70 @@ export const projectData: ProjectData[] = [
     },
   },
   {
+    title: "Jobora",
+    desc: "A talent matching platform for the modern workplace, optimised for web and mobile.",
+    category: "Web/Mobile",
+    links: ["https://jobora.com.au"],
+    bgColour: "bg-[#3c6e71]",
+    cardSize: "md",
+    stack: {
+      Design: [
+        {
+          title: "Responsive Design",
+          desc: "Optimised for web, iOS, and Android platforms, ensuring a seamless user experience across devices.",
+        },
+      ],
+      Frontend: [
+        {
+          title: "UI Development (Expo - React Native Web)",
+          desc: "Implemented a user-friendly interface for both web and mobile platforms using Expo and React Native Web.",
+        },
+        {
+          title: "State Management (Redux Toolkit)",
+          desc: "Ensured efficient state management for user data, job listings, and application processes.",
+        },
+        {
+          title: "AI Integration",
+          desc: "Integrated advanced AI algorithms for precise talent matching and job recommendations.",
+        },
+      ],
+      Backend: [
+        {
+          title: "Serverless Architecture (AWS Lambda)",
+          desc: "Utilised AWS Lambda functions for scalable and efficient backend processing.",
+        },
+        {
+          title: "Database (Amazon DynamoDB)",
+          desc: "Leveraged DynamoDB for storing and managing user profiles, job listings, and matching data.",
+        },
+        {
+          title: "API Integration (Jobaddr)",
+          desc: "Integrated Jobaddr API for comprehensive recruitment management features.",
+        },
+      ],
+      DevOps: [
+        {
+          title: "Deployment (AWS S3 & CloudFront)",
+          desc: "Frontend code hosted on S3 and distributed via CloudFront for optimal performance and global reach.",
+        },
+        {
+          title: "CI/CD (AWS CodePipeline)",
+          desc: "Implemented continuous integration and deployment using AWS CodePipeline for streamlined updates.",
+        },
+      ],
+      Other: [
+        {
+          title: "Analytics",
+          desc: "Implemented data-driven insights on hiring trends and candidate performance using AWS Analytics services.",
+        },
+        {
+          title: "Security",
+          desc: "Ensured data protection and compliance with industry standards using AWS security features.",
+        },
+      ],
+    },
+  },
+  {
     title: "Barber Software Solutions",
     desc: "Business solutions that allow customers to make and manage bookings for barbershops.",
     links: [
